@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   var WEBSERVER_PORT = 8012;
   var LIVERELOAD_PORT = 12022;
 
-  require('time-grunt')(grunt); 
+  require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
@@ -51,13 +51,6 @@ module.exports = function(grunt) {
         livereload: LIVERELOAD_PORT
       },
 
-      test: {
-        options: {
-          port: WEBSERVER_PORT,
-          open: 'http://localhost:' + WEBSERVER_PORT + '/_SpecRunner.html'
-        }
-      },
-
       docs: {
         options: {
           port: WEBSERVER_PORT + 1,
@@ -68,7 +61,7 @@ module.exports = function(grunt) {
 
     exec: {
       fixjsstyle: {
-        command: 'fixjsstyle Gruntfile.js && fixjsstyle -r src/ && fixjsstyle -r spec/'
+        command: 'fixjsstyle Gruntfile.js && fixjsstyle -r src/'
       }
     },
 
@@ -84,7 +77,7 @@ module.exports = function(grunt) {
 
       src: {
         files: [
-          'src/**/*.js',
+          'src/**/*.js'
         ],
         tasks: [
           'lint',
@@ -100,7 +93,7 @@ module.exports = function(grunt) {
           BANNER: '<%= meta.banner %>'
         }
       },
-      
+
       dev: {
         src: 'src/backbone-threejs.js',
         dest: 'backbone-threejs.js'
@@ -112,9 +105,9 @@ module.exports = function(grunt) {
         banner: '<%= meta.banner %>'
       },
       prod: {
-        mangle: {
-          except: ['backbone-threejs', 'bb3js']
-        },
+        // mangle: {
+        // except: ['backbone-threejs', 'bb3js']
+        // },
         src: 'backbone-threejs.js',
         dest: 'backbone-threejs.min.js'
       }
@@ -134,8 +127,6 @@ module.exports = function(grunt) {
     'jsbeautifier',
     'exec:fixjsstyle'
   ]);
-
-  grunt.registerTask('build', ['requirejs']);
 
   grunt.registerTask('build', [
     'uglify',
