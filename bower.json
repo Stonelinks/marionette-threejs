@@ -1,0 +1,27 @@
+{
+  "name": "backbone-threejs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Stonelinks/backbone-threejs",
+  "authors": [
+    "Lucas Doyle <lucas.p.doyle@gmail.com>"
+  ],
+  "description": "A fast and easy to use vector and matrix library",
+  "main": "backbone-threejs.js",
+  "keywords": [
+    "math",
+    "vector",
+    "matrix"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "threejs": "r68",
+    "backbone": "~1.1.2"
+  }
+}

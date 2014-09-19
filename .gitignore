@@ -1,0 +1,17 @@
+*.a
+*.o
+*.so
+*.mo
+*.pyc
+*~
+.svn
+
+# exclude little turds left about by git during a merge
+*.orig
+
+# grunt stuff
+.grunt
+
+# javascript component directories to ignore
+bower_components
+node_modules

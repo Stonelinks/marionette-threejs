@@ -1,0 +1,39 @@
+{
+  "name": "backbone-threejs",
+  "version": "0.0.0",
+  "description": "A fast and easy to use vector and matrix library",
+  "main": "backbone-threejs.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Stonelinks/backbone-threejs.git"
+  },
+  "keywords": [
+    "math",
+    "vector",
+    "matrix"
+  ],
+  "author": "Lucas Doyle <lucas.p.doyle@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stonelinks/backbone-threejs/issues"
+  },
+  "homepage": "https://github.com/Stonelinks/backbone-threejs",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-docco": "^0.3.3",
+    "grunt-exec": "^0.4.6",
+    "grunt-jsbeautifier": "^0.2.7",
+    "grunt-preprocess": "^4.0.0",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^1.0.0"
+  }
+}
