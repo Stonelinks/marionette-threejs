@@ -1,9 +1,5 @@
 var canvasID = '#canvas-anchor';
 
-var capitalise = function(string) {
-  return string && string.charAt(0).toUpperCase() + string.slice(1);
-};
-
 var ThreeJSRenderer = BaseRealtimeView.extend({
 
   template: '#renderer-template',
