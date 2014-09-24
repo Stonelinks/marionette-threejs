@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width" name="viewport">
+
+  <title>Backbone-threejs</title>
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400italic,400,700" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="example.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wrapper">
+  <div id="page-content-wrapper">
+    <div id="transform-control-anchor">
+    </div>
+    <div id="renderer-anchor">
+    </div>
+  </div>
+</div>
+
+<script id="transform-control-template" type="text/html">
+  <div></div>
+</script>
+
+<script id="transform-control-template" type="text/html">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a id="feed-toggle" href="javascript:void(0)">Toggle Feed</a></li>
+        <li><a id="translate-mode" href="javascript:void(0)"><span class="glyphicon glyphicon-move"></span> Move</a></li>
+        <li><a id="rotate-mode" href="javascript:void(0)"><span class="glyphicon glyphicon-refresh"></span> Rotate</a></li>
+        <li><a id="scale-mode" href="javascript:void(0)"><span class="glyphicon glyphicon-resize-full"></span> Scale</a></li>
+        <li><a id="toggle-space" href="javascript:void(0)">
+            <span class="glyphicon glyphicon-<%= transformControlSpace == 'Local' ? 'adjust' : 'globe' %>"></span>
+             <%= capitalise(transformControlSpace) %> space</a></li>
+        <li><a id="add-box" href="javascript:void(0)"><span class="glyphicon glyphicon-plus"></span> Add box</a></li>
+        <li><a id="add-torus" href="javascript:void(0)"><span class="glyphicon glyphicon-record"></span> Add torus</a></li>
+      </ul>
+    </div>
+  </nav>
+</script>
+
+<!-- backbone and friends -->
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/underscore/underscore.js"></script>
+<script src="/bower_components/backbone/backbone.js"></script>
+
+<!-- threejs -->
+<script src="/bower_components/threejs/build/three.js"></script>
+
+<!-- backbone-threejs -->
+<script src="/backbone-threejs.js"></script>
+
+<script src="/example/main.js"></script>
+
+</body>
+</html>

@@ -1,14 +1,6 @@
-var canvasID = '#canvas-anchor';
+var ThreeJSRenderer = bb3js.ThreeJSRenderer = Backbone.View.extend({
 
-var ThreeJSRenderer = BaseRealtimeView.extend({
-
-  template: '#renderer-template',
-
-  templateHelpers: function() {
-    return {
-      transformControlSpace: this.transformControl && capitalise(this.transformControl.get('space'))
-    };
-  },
+  template: _.template('<div></div>'),
 
   collectionEvents: {
     'remove': function(drawable) {
@@ -21,88 +13,9 @@ var ThreeJSRenderer = BaseRealtimeView.extend({
     }
   },
 
-  events: {
-    'click #feed-toggle': function(e) {
-      var _this = this;
-      setTimeout(function() {
-        _this.onWindowResize();
-      }, 1100);
-      $('#wrapper').toggleClass('toggled');
-    },
-
-    'click #translate-mode': function(e) {
-      this.transformControl.set('mode', 'translate');
-    },
-
-    'click #rotate-mode': function(e) {
-      this.transformControl.set('mode', 'rotate');
-    },
-
-    'click #scale-mode': function(e) {
-      this.transformControl.set('mode', 'scale');
-    },
-
-    'click #toggle-space': function(e) {
-      var newSpace = this.transformControl.get('space') == 'local' ? 'world' : 'local';
-      this.transformControl.set('space', newSpace);
-      this.render();
-    },
-
-    'click #add-box': function(e) {
-      window.sendFeedUpdate('added box');
-
-      this.createNewDrawable({
-        texture: '/img/crate.gif',
-        geometryType: 'BoxGeometry',
-        geometryParams: [200, 200, 200]
-      });
-    },
-
-    'click #add-torus': function(e) {
-      window.sendFeedUpdate('added torus');
-
-      this.createNewDrawable({
-        texture: '/img/crate.gif',
-        geometryType: 'TorusGeometry',
-        geometryParams: [50, 20, 20, 20]
-      });
-    },
-
-    'click #add-monster': function(e) {
-      window.sendFeedUpdate('added monster');
-
-      this.createNewDrawable({
-        geometryType: 'collada',
-        // geometryParams: ['/vendor/collada_robots/kawada-hironx.zae']
-        geometryParams: ['/models/monster.dae', 0.1]
-      });
-    },
-
-    'click #add-irex': function(e) {
-      window.sendFeedUpdate('added irex scene');
-
-      this.createNewDrawable({
-        geometryType: 'collada',
-        // geometryParams: ['/vendor/collada_robots/kawada-hironx.zae']
-        geometryParams: ['/models/irex2013_copy.mujin.dae', 500.0]
-      });
-    },
-
-    'click .load-robot': function(e) {
-      var $target = $(e.currentTarget);
-      window.sendFeedUpdate('added ' + $target.text());
-      var robotUrl = '/vendor/collada_robots/' + $target.data('robot');
-
-      this.createNewDrawable({
-        geometryType: 'collada_zae',
-        geometryParams: [robotUrl, 500.0]
-      });
-    }
-  },
-
   createNewDrawable: function(options) {
 
-    var newDrawable = new Drawable(options);
+    var newDrawable = new this.collection.model(options);
 
     var _this = this;
     this.collection.once('drawable:loaded', function(newDrawable) {
@@ -182,11 +95,11 @@ var ThreeJSRenderer = BaseRealtimeView.extend({
   },
 
   getWidth: function() {
-    return window.innerWidth - $(canvasID).offset().left - 1.0;
+    return window.innerWidth - this.$el.find('div').offset().left - 1.0;
   },
 
   getHeight: function() {
-    return window.innerHeight - $(canvasID).offset().top - 5.25; // why?
+    return window.innerHeight - this.$el.find('div').offset().top - 5.25; // why?
   },
 
   camera: undefined,
@@ -205,7 +118,7 @@ var ThreeJSRenderer = BaseRealtimeView.extend({
 
     var _this = this;
     var _setRendererDOMElement = function() {
-      _this.$el.find(canvasID).append(_this.renderer.domElement);
+      _this.$el.find('div').append(_this.renderer.domElement);
     };
     _setRendererDOMElement();
     this.on('render', _setRendererDOMElement);
@@ -232,7 +145,6 @@ var ThreeJSRenderer = BaseRealtimeView.extend({
   addDrawable: function(drawable) {
     console.log('ThreeJSRenderer: add drawable');
 
-    // synchronously insert
     var mesh = drawable.getMesh();
     if (mesh) {
       this.scene.add(mesh);
@@ -241,6 +153,7 @@ var ThreeJSRenderer = BaseRealtimeView.extend({
 
   removeDrawable: function(drawable) {
     console.log('ThreeJSRenderer: remove drawable');
+
     var mesh = drawable.getMesh();
     if (mesh) {
       this.scene.remove(mesh);

@@ -1,7 +1,7 @@
 {
   "name": "backbone-threejs",
   "version": "0.0.0",
-  "description": "A fast and easy to use vector and matrix library",
+  "description": "Simple Backbone wrappers around three.js components",
   "main": "backbone-threejs.js",
   "directories": {
     "test": "test"
@@ -14,9 +14,9 @@
     "url": "git://github.com/Stonelinks/backbone-threejs.git"
   },
   "keywords": [
-    "math",
-    "vector",
-    "matrix"
+    "threejs",
+    "backbone",
+    "webgl"
   ],
   "author": "Lucas Doyle <lucas.p.doyle@gmail.com>",
   "license": "MIT",

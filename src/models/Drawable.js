@@ -1,4 +1,5 @@
-var Drawable = Backbone.Model.extend({
+var Drawable = bb3js.Drawable = Backbone.Model.extend({
+
   defaults: {
     texture: '/img/crate.gif',
     geometryType: 'BoxGeometry',
@@ -21,7 +22,6 @@ var Drawable = Backbone.Model.extend({
       _this.trigger('drawable:loaded', _this);
 
       _this.on('change:matrix', function() {
-        // console.log('Drawable: update mesh');
         _this.updateMesh();
       });
       _this.updateMesh();
@@ -38,7 +38,7 @@ var Drawable = Backbone.Model.extend({
       this._mesh = new THREE.Mesh(this._geometry, this._material);
     }
     else {
-      console.warn('Drawable: no compatible geometry mesh');
+      console.warn('Drawable: no compatible geometry type');
     }
   },
 

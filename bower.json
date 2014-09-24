@@ -5,12 +5,12 @@
   "authors": [
     "Lucas Doyle <lucas.p.doyle@gmail.com>"
   ],
-  "description": "A fast and easy to use vector and matrix library",
+  "description": "Simple Backbone wrappers around three.js components",
   "main": "backbone-threejs.js",
   "keywords": [
-    "math",
-    "vector",
-    "matrix"
+    "threejs",
+    "backbone",
+    "webgl"
   ],
   "license": "MIT",
   "ignore": [
@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "threejs": "r68",
-    "backbone": "~1.1.2"
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.1"
   }
 }

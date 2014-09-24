@@ -1,4 +1,4 @@
-var OrbitControl = Backbone.Model.extend({
+var OrbitControl = bb3js.OrbitControl = Backbone.Model.extend({
 
   _control: undefined,
 

@@ -129,8 +129,8 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'uglify',
-    'preprocess:dev'
+    'preprocess:dev',
+    'uglify'
   ]);
 
   grunt.registerTask('docs', ['docco']);
