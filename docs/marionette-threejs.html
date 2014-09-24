@@ -30,7 +30,7 @@
               <p>marionette-threejs - v0.0.0</p>
 <p><a href="https://github.com/Stonelinks/marionette-threejs">https://github.com/Stonelinks/marionette-threejs</a></p>
 <p>Simple wrappers around three.js components using Backbone.Marionette</p>
-<p>Copyright (c)2014 - Lucas Doyle <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x6c;&#117;&#x63;&#97;&#x73;&#x2e;&#x70;&#46;&#100;&#x6f;&#121;&#x6c;&#101;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x6c;&#117;&#x63;&#97;&#x73;&#x2e;&#x70;&#46;&#100;&#x6f;&#121;&#x6c;&#101;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>Copyright (c)2014 - Lucas Doyle <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#108;&#x75;&#99;&#97;&#115;&#x2e;&#x70;&#x2e;&#100;&#x6f;&#x79;&#x6c;&#x65;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#108;&#x75;&#99;&#97;&#115;&#x2e;&#x70;&#x2e;&#100;&#x6f;&#x79;&#x6c;&#x65;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></p>
 <p>Distributed under MIT license</p>
 
             </div>
@@ -2618,9 +2618,22 @@ domElement.addEventListener( “touchleave”, onPointerUp, false );</p>
     };
 
     <span class="hljs-keyword">if</span> (THREE.hasOwnProperty(<span class="hljs-keyword">this</span>.get(<span class="hljs-string">'geometryType'</span>))) {
-      <span class="hljs-keyword">this</span>._texture = THREE.ImageUtils.loadTexture(<span class="hljs-keyword">this</span>.get(<span class="hljs-string">'texture'</span>), <span class="hljs-keyword">new</span> THREE.UVMapping(), _loaded);
-      <span class="hljs-keyword">this</span>._texture.anisotropy = <span class="hljs-built_in">window</span>._renderer.renderer.getMaxAnisotropy();
-      <span class="hljs-keyword">this</span>._geometry = construct(THREE[<span class="hljs-keyword">this</span>.get(<span class="hljs-string">'geometryType'</span>)], <span class="hljs-keyword">this</span>.get(<span class="hljs-string">'geometryParams'</span>));
+      <span class="hljs-keyword">this</span>._texture = THREE.ImageUtils.loadTexture(<span class="hljs-keyword">this</span>.get(<span class="hljs-string">'texture'</span>), <span class="hljs-keyword">new</span> THREE.UVMapping(), _loaded);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-59">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-59">&#182;</a>
+              </div>
+              <p>this._texture.anisotropy = window._renderer.renderer.getMaxAnisotropy();</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">this</span>._geometry = construct(THREE[<span class="hljs-keyword">this</span>.get(<span class="hljs-string">'geometryType'</span>)], <span class="hljs-keyword">this</span>.get(<span class="hljs-string">'geometryParams'</span>));
       <span class="hljs-keyword">this</span>._material = <span class="hljs-keyword">new</span> THREE.MeshLambertMaterial({
         map: <span class="hljs-keyword">this</span>._texture
       });
@@ -2690,11 +2703,11 @@ domElement.addEventListener( “touchleave”, onPointerUp, false );</p>
         </li>
         
         
-        <li id="section-59">
+        <li id="section-60">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-59">&#182;</a>
+                <a class="pilcrow" href="#section-60">&#182;</a>
               </div>
               <p>orbit controls dynamically attach and remove these as part of dragging
 ‘mousemove’: ‘onMouseMove’,
@@ -2744,28 +2757,14 @@ domElement.addEventListener( “touchleave”, onPointerUp, false );</p>
         </li>
         
         
-        <li id="section-60">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-60">&#182;</a>
-              </div>
-              <p>elements
-0 4 8 12 1 5 9 13 2 6 10 14 3 7 11 15</p>
-
-            </div>
-            
-        </li>
-        
-        
         <li id="section-61">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-61">&#182;</a>
               </div>
-              <p>set: function (n11, n12, n13, n14, n21, n22, n23, n24, n31, n32, n33, n34, n41, n42, n43, n44)
-                0,   1,   2,   3,   4,   5,   6,   7,   8,   9,   10,  11,  12,  13,  14,  15</p>
+              <p>elements
+0 4 8 12 1 5 9 13 2 6 10 14 3 7 11 15</p>
 
             </div>
             
@@ -2778,7 +2777,8 @@ domElement.addEventListener( “touchleave”, onPointerUp, false );</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-62">&#182;</a>
               </div>
-              <p>var te = this.elements;</p>
+              <p>set: function (n11, n12, n13, n14, n21, n22, n23, n24, n31, n32, n33, n34, n41, n42, n43, n44)
+                0,   1,   2,   3,   4,   5,   6,   7,   8,   9,   10,  11,  12,  13,  14,  15</p>
 
             </div>
             
@@ -2790,6 +2790,19 @@ domElement.addEventListener( “touchleave”, onPointerUp, false );</p>
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-63">&#182;</a>
+              </div>
+              <p>var te = this.elements;</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-64">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-64">&#182;</a>
               </div>
               <p>te[ 0 ] = n11; te[ 4 ] = n12; te[ 8 ] = n13; te[ 12 ] = n14;
 te[ 1 ] = n21; te[ 5 ] = n22; te[ 9 ] = n23; te[ 13 ] = n24;
@@ -2804,11 +2817,11 @@ te[ 3 ] = n41; te[ 7 ] = n42; te[ 11 ] = n43; te[ 15 ] = n44;</p>
         </li>
         
         
-        <li id="section-64">
+        <li id="section-65">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-64">&#182;</a>
+                <a class="pilcrow" href="#section-65">&#182;</a>
               </div>
               <p>col-major (elements - sanity check): [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 100, 101, 102, 1]
 row-major (set - sanity check): [0, ]</p>
@@ -2822,11 +2835,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-65">
+        <li id="section-66">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-65">&#182;</a>
+                <a class="pilcrow" href="#section-66">&#182;</a>
               </div>
               <p>drawable.trigger(‘change:matrix’);</p>
 
@@ -2837,11 +2850,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-66">
+        <li id="section-67">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-66">&#182;</a>
+                <a class="pilcrow" href="#section-67">&#182;</a>
               </div>
               <p>silent: true</p>
 
@@ -2949,11 +2962,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-67">
+        <li id="section-68">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-67">&#182;</a>
+                <a class="pilcrow" href="#section-68">&#182;</a>
               </div>
               <h1 id="views">Views</h1>
 
@@ -2971,11 +2984,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-68">
+        <li id="section-69">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-68">&#182;</a>
+                <a class="pilcrow" href="#section-69">&#182;</a>
               </div>
               <p>this basically takes the place of the add event</p>
 
@@ -2984,19 +2997,6 @@ row-major (set - sanity check): [0, ]</p>
             <div class="content"><div class='highlight'><pre>    <span class="hljs-string">'drawable:loaded'</span>: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(drawable)</span> </span>{
       <span class="hljs-keyword">this</span>.addDrawable(drawable);
     }
-  },
-
-  createNewDrawable: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(options)</span> </span>{
-
-    <span class="hljs-keyword">var</span> newDrawable = <span class="hljs-keyword">new</span> <span class="hljs-keyword">this</span>.collection.model(options);
-
-    <span class="hljs-keyword">var</span> _this = <span class="hljs-keyword">this</span>;
-    <span class="hljs-keyword">this</span>.collection.once(<span class="hljs-string">'drawable:loaded'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(newDrawable)</span> </span>{
-      _this.transformControl.attachDrawable(newDrawable);
-    });
-
-    <span class="hljs-keyword">this</span>.collection.add(newDrawable);
-    newDrawable.save();
   },
 
   _transformControlDragging: <span class="hljs-literal">false</span>,
@@ -3200,11 +3200,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-69">
+        <li id="section-70">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-69">&#182;</a>
+                <a class="pilcrow" href="#section-70">&#182;</a>
               </div>
               <p>reuse the same transformControl instance</p>
 
@@ -3214,6 +3214,7 @@ row-major (set - sanity check): [0, ]</p>
       <span class="hljs-keyword">this</span>.transformControl = <span class="hljs-keyword">new</span> TransformControl({
         renderer: <span class="hljs-keyword">this</span>
       });
+      <span class="hljs-keyword">this</span>.trigger(<span class="hljs-string">'transformcontrols:create'</span>, <span class="hljs-keyword">this</span>.transformControl);
     }
   },
 
@@ -3228,11 +3229,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-70">
+        <li id="section-71">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-70">&#182;</a>
+                <a class="pilcrow" href="#section-71">&#182;</a>
               </div>
               <p>reuse the same orbitControl instance</p>
 
@@ -3291,11 +3292,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-71">
+        <li id="section-72">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-71">&#182;</a>
+                <a class="pilcrow" href="#section-72">&#182;</a>
               </div>
               <p>only dispatch to orbit control if not intersecting transform control</p>
 
@@ -3367,7 +3368,7 @@ row-major (set - sanity check): [0, ]</p>
 
     <span class="hljs-string">'click #add-box'</span>: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> </span>{
       <span class="hljs-keyword">this</span>.createNewDrawable({
-        texture: <span class="hljs-string">'/img/crate.gif'</span>,
+        texture: <span class="hljs-string">'/example/crate.gif'</span>,
         geometryType: <span class="hljs-string">'BoxGeometry'</span>,
         geometryParams: [<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>]
       });
@@ -3375,11 +3376,24 @@ row-major (set - sanity check): [0, ]</p>
 
     <span class="hljs-string">'click #add-torus'</span>: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> </span>{
       <span class="hljs-keyword">this</span>.createNewDrawable({
-        texture: <span class="hljs-string">'/img/crate.gif'</span>,
+        texture: <span class="hljs-string">'/example/crate.gif'</span>,
         geometryType: <span class="hljs-string">'TorusGeometry'</span>,
         geometryParams: [<span class="hljs-number">50</span>, <span class="hljs-number">20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">20</span>]
       });
     }
+  },
+
+  createNewDrawable: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(options)</span> </span>{
+
+    <span class="hljs-keyword">var</span> newDrawable = <span class="hljs-keyword">new</span> <span class="hljs-keyword">this</span>.collection.model(options);
+
+    <span class="hljs-keyword">var</span> _this = <span class="hljs-keyword">this</span>;
+    <span class="hljs-keyword">this</span>.collection.once(<span class="hljs-string">'drawable:loaded'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(newDrawable)</span> </span>{
+      _this.transformControl.attachDrawable(newDrawable);
+    });
+
+    <span class="hljs-keyword">this</span>.collection.add(newDrawable);
+    newDrawable.save();
   },
 
   transformControl: <span class="hljs-literal">undefined</span>,

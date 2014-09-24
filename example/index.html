@@ -28,15 +28,14 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li><a id="feed-toggle" href="javascript:void(0)">Toggle Feed</a></li>
+        <li><a id="add-box" href="javascript:void(0)"><span class="glyphicon glyphicon-plus"></span> Add box</a></li>
+        <li><a id="add-torus" href="javascript:void(0)"><span class="glyphicon glyphicon-record"></span> Add torus</a></li>
         <li><a id="translate-mode" href="javascript:void(0)"><span class="glyphicon glyphicon-move"></span> Move</a></li>
         <li><a id="rotate-mode" href="javascript:void(0)"><span class="glyphicon glyphicon-refresh"></span> Rotate</a></li>
         <li><a id="scale-mode" href="javascript:void(0)"><span class="glyphicon glyphicon-resize-full"></span> Scale</a></li>
         <li><a id="toggle-space" href="javascript:void(0)">
             <span class="glyphicon glyphicon-<%= transformControlSpace == 'Local' ? 'adjust' : 'globe' %>"></span>
-             <%= capitalise(transformControlSpace) %> space</a></li>
-        <li><a id="add-box" href="javascript:void(0)"><span class="glyphicon glyphicon-plus"></span> Add box</a></li>
-        <li><a id="add-torus" href="javascript:void(0)"><span class="glyphicon glyphicon-record"></span> Add torus</a></li>
+             <%= transformControlSpace %> space</a></li>
       </ul>
     </div>
   </nav>

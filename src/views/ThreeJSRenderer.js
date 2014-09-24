@@ -13,19 +13,6 @@ var ThreeJSRenderer = m3js.ThreeJSRenderer = Marionette.ItemView.extend({
     }
   },
 
-  createNewDrawable: function(options) {
-
-    var newDrawable = new this.collection.model(options);
-
-    var _this = this;
-    this.collection.once('drawable:loaded', function(newDrawable) {
-      _this.transformControl.attachDrawable(newDrawable);
-    });
-
-    this.collection.add(newDrawable);
-    newDrawable.save();
-  },
-
   _transformControlDragging: false,
 
   onPointerDown: function(e) {
@@ -229,6 +216,7 @@ var ThreeJSRenderer = m3js.ThreeJSRenderer = Marionette.ItemView.extend({
       this.transformControl = new TransformControl({
         renderer: this
       });
+      this.trigger('transformcontrols:create', this.transformControl);
     }
   },
 

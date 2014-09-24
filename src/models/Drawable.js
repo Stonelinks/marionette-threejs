@@ -29,7 +29,7 @@ var Drawable = m3js.Drawable = Backbone.Model.extend({
 
     if (THREE.hasOwnProperty(this.get('geometryType'))) {
       this._texture = THREE.ImageUtils.loadTexture(this.get('texture'), new THREE.UVMapping(), _loaded);
-      this._texture.anisotropy = window._renderer.renderer.getMaxAnisotropy();
+      // this._texture.anisotropy = window._renderer.renderer.getMaxAnisotropy();
       this._geometry = construct(THREE[this.get('geometryType')], this.get('geometryParams'));
       this._material = new THREE.MeshLambertMaterial({
         map: this._texture

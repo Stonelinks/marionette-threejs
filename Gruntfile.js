@@ -41,7 +41,8 @@ module.exports = function(grunt) {
 
       extras: {
         src: [
-          'Gruntfile.js'
+          'Gruntfile.js',
+          'example/*.js'
         ]
       }
     },
@@ -61,7 +62,7 @@ module.exports = function(grunt) {
 
     exec: {
       fixjsstyle: {
-        command: 'fixjsstyle Gruntfile.js && fixjsstyle -r src/'
+        command: 'fixjsstyle Gruntfile.js && fixjsstyle -r src/ && fixjsstyle -r example/'
       }
     },
 

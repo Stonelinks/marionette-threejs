@@ -27,7 +27,7 @@ var TransformControlMode = m3js.TransformControlMode = Marionette.ItemView.exten
 
     'click #add-box': function(e) {
       this.createNewDrawable({
-        texture: '/img/crate.gif',
+        texture: '/example/crate.gif',
         geometryType: 'BoxGeometry',
         geometryParams: [200, 200, 200]
       });
@@ -35,11 +35,24 @@ var TransformControlMode = m3js.TransformControlMode = Marionette.ItemView.exten
 
     'click #add-torus': function(e) {
       this.createNewDrawable({
-        texture: '/img/crate.gif',
+        texture: '/example/crate.gif',
         geometryType: 'TorusGeometry',
         geometryParams: [50, 20, 20, 20]
       });
     }
+  },
+
+  createNewDrawable: function(options) {
+
+    var newDrawable = new this.collection.model(options);
+
+    var _this = this;
+    this.collection.once('drawable:loaded', function(newDrawable) {
+      _this.transformControl.attachDrawable(newDrawable);
+    });
+
+    this.collection.add(newDrawable);
+    newDrawable.save();
   },
 
   transformControl: undefined,
