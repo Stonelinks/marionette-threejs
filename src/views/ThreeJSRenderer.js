@@ -1,4 +1,4 @@
-var ThreeJSRenderer = m3js.ThreeJSRenderer = Backbone.View.extend({
+var ThreeJSRenderer = m3js.ThreeJSRenderer = Marionette.ItemView.extend({
 
   template: _.template('<div></div>'),
 
@@ -125,7 +125,7 @@ var ThreeJSRenderer = m3js.ThreeJSRenderer = Backbone.View.extend({
   },
 
   setupCamera: function() {
-    this.camera = new THREE.PerspectiveCamera(70, this.getWidth() / this.getHeight(), 0.01, 3000);
+    this.camera = new THREE.PerspectiveCamera(70, this.getWidth() / this.getHeight(), 0.01, 10000.0);
     this.camera.position.set(1000, 500, 1000);
     this.camera.lookAt(new THREE.Vector3(0, 200, 0));
   },

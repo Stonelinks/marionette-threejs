@@ -1,6 +1,4 @@
-var TransformControlMode = m3js.TransformControlMode = Backbone.View.extend({
-
-  template: _.template('<div></div>'),
+var TransformControlMode = m3js.TransformControlMode = Marionette.ItemView.extend({
 
   templateHelpers: function() {
     return {
