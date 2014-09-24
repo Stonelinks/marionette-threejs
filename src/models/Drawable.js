@@ -1,4 +1,4 @@
-var Drawable = bb3js.Drawable = Backbone.Model.extend({
+var Drawable = m3js.Drawable = Backbone.Model.extend({
 
   defaults: {
     texture: '/img/crate.gif',

@@ -1,4 +1,4 @@
-var TransformControl = bb3js.TransformControl = Backbone.Model.extend({
+var TransformControl = m3js.TransformControl = Backbone.Model.extend({
 
   defaults: {
     attachedDrawable: undefined,

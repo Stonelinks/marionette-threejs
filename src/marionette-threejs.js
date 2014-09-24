@@ -1,7 +1,7 @@
 /* @echo BANNER */
 // 'use strict';
 
-var bb3js = window.bb3js = {};
+var m3js = window.m3js = {};
 
 // #Bundle modified threejs controls
 // @include controls/OrbitControls.js

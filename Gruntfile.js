@@ -54,7 +54,7 @@ module.exports = function(grunt) {
       docs: {
         options: {
           port: WEBSERVER_PORT + 1,
-          open: 'http://localhost:' + (WEBSERVER_PORT + 1) + '/docs/backbone-threejs.html'
+          open: 'http://localhost:' + (WEBSERVER_PORT + 1) + '/docs/marionette-threejs.html'
         }
       }
     },
@@ -95,8 +95,8 @@ module.exports = function(grunt) {
       },
 
       dev: {
-        src: 'src/backbone-threejs.js',
-        dest: 'backbone-threejs.js'
+        src: 'src/marionette-threejs.js',
+        dest: 'marionette-threejs.js'
       }
     },
 
@@ -106,16 +106,16 @@ module.exports = function(grunt) {
       },
       prod: {
         // mangle: {
-        // except: ['backbone-threejs', 'bb3js']
+        // except: ['marionette-threejs', 'm3js']
         // },
-        src: 'backbone-threejs.js',
-        dest: 'backbone-threejs.min.js'
+        src: 'marionette-threejs.js',
+        dest: 'marionette-threejs.min.js'
       }
     },
 
     docco: {
       debug: {
-        src: ['backbone-threejs.js'],
+        src: ['marionette-threejs.js'],
         options: {
           output: 'docs/'
         }

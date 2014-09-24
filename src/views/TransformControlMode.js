@@ -1,4 +1,4 @@
-var TransformControlMode = bb3js.TransformControlMode = Backbone.View.extend({
+var TransformControlMode = m3js.TransformControlMode = Backbone.View.extend({
 
   template: _.template('<div></div>'),
 

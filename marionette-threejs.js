@@ -1,8 +1,8 @@
-// backbone-threejs - v0.0.0
+// marionette-threejs - v0.0.0
 //
-// https://github.com/Stonelinks/backbone-threejs
+// https://github.com/Stonelinks/marionette-threejs
 //
-// Simple Backbone wrappers around three.js components
+// Simple wrappers around three.js components using Backbone.Marionette
 //
 // Copyright (c)2014 - Lucas Doyle <lucas.p.doyle@gmail.com>
 //
@@ -12,7 +12,7 @@
 
 // 'use strict';
 
-var bb3js = window.bb3js = {};
+var m3js = window.m3js = {};
 
 // #Bundle modified threejs controls
 /**
@@ -1889,7 +1889,7 @@ var capitalise = function(string) {
 
 
 // #Models
-var Drawable = bb3js.Drawable = Backbone.Model.extend({
+var Drawable = m3js.Drawable = Backbone.Model.extend({
 
   defaults: {
     texture: '/img/crate.gif',
@@ -1947,7 +1947,7 @@ var Drawable = bb3js.Drawable = Backbone.Model.extend({
   }
 });
 
-var OrbitControl = bb3js.OrbitControl = Backbone.Model.extend({
+var OrbitControl = m3js.OrbitControl = Backbone.Model.extend({
 
   _control: undefined,
 
@@ -2006,7 +2006,7 @@ var OrbitControl = bb3js.OrbitControl = Backbone.Model.extend({
   }
 });
 
-var TransformControl = bb3js.TransformControl = Backbone.Model.extend({
+var TransformControl = m3js.TransformControl = Backbone.Model.extend({
 
   defaults: {
     attachedDrawable: undefined,
@@ -2154,7 +2154,7 @@ var TransformControl = bb3js.TransformControl = Backbone.Model.extend({
 
 
 // #Views
-var ThreeJSRenderer = bb3js.ThreeJSRenderer = Backbone.View.extend({
+var ThreeJSRenderer = m3js.ThreeJSRenderer = Backbone.View.extend({
 
   template: _.template('<div></div>'),
 
@@ -2485,7 +2485,7 @@ var ThreeJSRenderer = bb3js.ThreeJSRenderer = Backbone.View.extend({
   }
 });
 
-var TransformControlMode = bb3js.TransformControlMode = Backbone.View.extend({
+var TransformControlMode = m3js.TransformControlMode = Backbone.View.extend({
 
   template: _.template('<div></div>'),
 

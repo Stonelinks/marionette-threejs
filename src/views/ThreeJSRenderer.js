@@ -1,4 +1,4 @@
-var ThreeJSRenderer = bb3js.ThreeJSRenderer = Backbone.View.extend({
+var ThreeJSRenderer = m3js.ThreeJSRenderer = Backbone.View.extend({
 
   template: _.template('<div></div>'),
 

@@ -1,15 +1,16 @@
 {
-  "name": "backbone-threejs",
+  "name": "marionette-threejs",
   "version": "0.0.0",
-  "homepage": "https://github.com/Stonelinks/backbone-threejs",
+  "homepage": "https://github.com/Stonelinks/marionette-threejs",
   "authors": [
     "Lucas Doyle <lucas.p.doyle@gmail.com>"
   ],
-  "description": "Simple Backbone wrappers around three.js components",
-  "main": "backbone-threejs.js",
+  "description": "Simple wrappers around three.js components using Backbone.Marionette",
+  "main": "marionette-threejs.js",
   "keywords": [
     "threejs",
     "backbone",
+    "marionette",
     "webgl"
   ],
   "license": "MIT",
@@ -22,7 +23,6 @@
   ],
   "dependencies": {
     "threejs": "r68",
-    "backbone": "~1.1.2",
-    "jquery": "~2.1.1"
+    "marionette": "~2.2.1"
   }
 }
