@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Stonelinks/marionette-threejs",
+  "authors": [
+    "Lucas Doyle <lucas.p.doyle@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "threejs": "r68",
+    "marionette": "~2.2.1"
+  }
+}
