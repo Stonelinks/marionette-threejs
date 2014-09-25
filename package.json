@@ -1,6 +1,6 @@
 {
   "name": "marionette-threejs",
-  "version": "0.0.0",
+  "version": "0.0.01",
   "description": "Simple wrappers around three.js components using Backbone.Marionette",
   "main": "marionette-threejs.js",
   "directories": {

@@ -1,6 +1,6 @@
 {
   "name": "marionette-threejs",
-  "version": "0.0.0",
+  "version": "0.0.01",
   "homepage": "https://github.com/Stonelinks/marionette-threejs",
   "authors": [
     "Lucas Doyle <lucas.p.doyle@gmail.com>"
@@ -18,6 +18,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "example",
+    "docs",
     "test",
     "tests"
   ],
