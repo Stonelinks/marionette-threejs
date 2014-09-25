@@ -8,7 +8,7 @@ $(document).ready(function() {
 
       'click #add-box': function(e) {
         this.createNewDrawable({
-          texture: '/example/crate.gif',
+          texture: 'crate.gif',
           geometryType: 'BoxGeometry',
           geometryParams: [200, 200, 200]
         });
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
       'click #add-torus': function(e) {
         this.createNewDrawable({
-          texture: '/example/crate.gif',
+          texture: 'crate.gif',
           geometryType: 'TorusGeometry',
           geometryParams: [50, 20, 20, 20]
         });
