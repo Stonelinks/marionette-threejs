@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 
     exec: {
       fixjsstyle: {
-        command: 'fixjsstyle Gruntfile.js && fixjsstyle -r src/ && fixjsstyle -r example/'
+        command: 'fixjsstyle Gruntfile.js && fixjsstyle -r src/ && fixjsstyle example/*.js'
       }
     },
 
@@ -121,6 +121,13 @@ module.exports = function(grunt) {
           output: 'docs/'
         }
       }
+    },
+
+    'gh-pages': {
+      options: {
+        base: '.'
+      },
+      src: ['**']
     }
   });
 
@@ -135,6 +142,13 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('docs', ['docco']);
+
+  grunt.registerTask('publish', [
+    'lint',
+    'build',
+    'docs',
+    'gh-pages'
+  ]);
 
   grunt.registerTask('default', [
     'lint',
