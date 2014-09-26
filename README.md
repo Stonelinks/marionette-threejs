@@ -1,19 +1,26 @@
-backbone-threejs
+marionette-threejs
 ================
 
-Simple Backbone wrappers around three.js components
+Simple wrappers around three.js components using [Backbone.Marionette](https://github.com/marionettejs/backbone.marionette)
 
 It provides a couple useful things for using three.js inside your backbone app.
 
 ##How to use it
 
-backbone-threejs can be used either as an AMD module or inside a regular script tag. It obviously depends on Backbone and three.js to work (check bower.json for exact version numbers), so make sure those are included. Use `backbone-threejs.js` for an unoptimized build that is easier to debug, or `backbone-threejs.min.js` for an optimized / minified version.
+marionette-threejs can be used either as an AMD module or inside a regular script tag. It obviously depends on Backbone and three.js to work (check bower.json for exact version numbers), so make sure those are included. Use `marionette-threejs.js` for an unoptimized build that is easier to debug, or `marionette-threejs.min.js` for an optimized / minified version.
+
+##Example
+
+An example of basic usage of marionette-threejs can be found below.
+
+###[Example](http://stonelinks.github.io/marionette-threejs/example/index.html)
+###[Example source code](https://github.com/Stonelinks/marionette-threejs/tree/master/example)
 
 ##Docs
 
 In lieu of formal documentation, the source code has been hevily annotated so you can easily figure out what is going on:
 
-###[Annotated source code](http://stonelinks.github.io/backbone-threejs/docs/backbone-threejs.html)
+###[Annotated source code](http://stonelinks.github.io/marionette-threejs/docs/marionette-threejs.html)
 
 ##Developing
 
