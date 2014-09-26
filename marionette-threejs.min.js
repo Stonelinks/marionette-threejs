@@ -1,4 +1,4 @@
-// marionette-threejs - v0.0.01
+// marionette-threejs - v0.0.2
 //
 // https://github.com/Stonelinks/marionette-threejs
 //
