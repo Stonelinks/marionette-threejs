@@ -30,7 +30,7 @@
               <p>marionette-threejs - v0.0.2</p>
 <p><a href="https://github.com/Stonelinks/marionette-threejs">https://github.com/Stonelinks/marionette-threejs</a></p>
 <p>Simple wrappers around three.js components using Backbone.Marionette</p>
-<p>Copyright (c)2014 - Lucas Doyle <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x6c;&#117;&#99;&#97;&#x73;&#46;&#x70;&#46;&#100;&#111;&#121;&#108;&#101;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#x6c;&#117;&#99;&#97;&#x73;&#46;&#x70;&#46;&#100;&#111;&#121;&#108;&#101;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>Copyright (c)2014 - Lucas Doyle <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#108;&#117;&#99;&#x61;&#x73;&#x2e;&#112;&#x2e;&#100;&#111;&#x79;&#108;&#101;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#108;&#117;&#99;&#x61;&#x73;&#x2e;&#112;&#x2e;&#100;&#111;&#x79;&#108;&#101;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>Distributed under MIT license</p>
 
             </div>
@@ -2902,27 +2902,14 @@ row-major (set - sanity check): [0, ]</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-69">&#182;</a>
               </div>
-              <p>drawable.trigger(‘change:matrix’);</p>
+              <p>drawable.trigger(‘change:matrix’);
+drawable.save({
+silent: true
+});</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>          drawable.save({</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-70">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-70">&#182;</a>
-              </div>
-              <p>silent: true</p>
-
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>          });
-        }
+            <div class="content"><div class='highlight'><pre>        }
       });
   
       _this.renderer.scene.add(_this._control);
@@ -3023,11 +3010,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-71">
+        <li id="section-70">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-71">&#182;</a>
+                <a class="pilcrow" href="#section-70">&#182;</a>
               </div>
               <h1 id="views">Views</h1>
 
@@ -3045,11 +3032,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-72">
+        <li id="section-71">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-72">&#182;</a>
+                <a class="pilcrow" href="#section-71">&#182;</a>
               </div>
               <p>this basically takes the place of the add event</p>
 
@@ -3261,11 +3248,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-73">
+        <li id="section-72">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-73">&#182;</a>
+                <a class="pilcrow" href="#section-72">&#182;</a>
               </div>
               <p>reuse the same transformControl instance</p>
 
@@ -3290,11 +3277,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-74">
+        <li id="section-73">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-74">&#182;</a>
+                <a class="pilcrow" href="#section-73">&#182;</a>
               </div>
               <p>reuse the same orbitControl instance</p>
 
@@ -3353,11 +3340,11 @@ row-major (set - sanity check): [0, ]</p>
         </li>
         
         
-        <li id="section-75">
+        <li id="section-74">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-75">&#182;</a>
+                <a class="pilcrow" href="#section-74">&#182;</a>
               </div>
               <p>only dispatch to orbit control if not intersecting transform control</p>
 

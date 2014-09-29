@@ -33,7 +33,6 @@ $(document).ready(function() {
       });
 
       this.collection.add(newDrawable);
-      newDrawable.save();
     },
 
     transformControl: undefined,
@@ -42,11 +41,6 @@ $(document).ready(function() {
       this.transformControl = options.transformControl;
     }
   });
-
-  // Backbone.sync: Overrides with dummy function
-  Backbone.sync = function(method, model, options) {
-    options.success();
-  };
 
   var TransformControlMode = m3js.TransformControlMode.extend({
     template: '#transform-control-template'

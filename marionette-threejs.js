@@ -2073,9 +2073,9 @@
         if (!_.isEqual(drawable.get('matrix'), elementsRowMajor)) {
           drawable.set('matrix', elementsRowMajor);
           // drawable.trigger('change:matrix');
-          drawable.save({
-            // silent: true
-          });
+          // drawable.save({
+          // silent: true
+          // });
         }
       });
   
