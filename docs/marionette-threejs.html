@@ -30,7 +30,7 @@
               <p>marionette-threejs - v0.0.2</p>
 <p><a href="https://github.com/Stonelinks/marionette-threejs">https://github.com/Stonelinks/marionette-threejs</a></p>
 <p>Simple wrappers around three.js components using Backbone.Marionette</p>
-<p>Copyright (c)2014 - Lucas Doyle <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#108;&#117;&#99;&#x61;&#x73;&#x2e;&#112;&#x2e;&#100;&#111;&#x79;&#108;&#101;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#108;&#117;&#99;&#x61;&#x73;&#x2e;&#112;&#x2e;&#100;&#111;&#x79;&#108;&#101;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>Copyright (c)2014 - Lucas Doyle <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#108;&#117;&#99;&#x61;&#x73;&#46;&#x70;&#x2e;&#100;&#111;&#x79;&#108;&#x65;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#108;&#117;&#99;&#x61;&#x73;&#46;&#x70;&#x2e;&#100;&#111;&#x79;&#108;&#x65;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a></p>
 <p>Distributed under MIT license</p>
 
             </div>
@@ -54,7 +54,7 @@
             </div>
             
             <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define === <span class="hljs-string">'function'</span> &amp;&amp; define.amd) {
-    define([<span class="hljs-string">'backbone'</span>, <span class="hljs-string">'exports'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(Backbone, exports)</span> </span>{</pre></div></div>
+    define([<span class="hljs-string">'backbone'</span>, <span class="hljs-string">'marionette'</span>, <span class="hljs-string">'threejs'</span>, <span class="hljs-string">'exports'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(Backbone, Marionette, THREE, exports)</span> </span>{</pre></div></div>
             
         </li>
         
@@ -70,7 +70,7 @@ others that may still expect a global m3js.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>      root.m3js = factory(root, exports, Backbone);
+            <div class="content"><div class='highlight'><pre>      root.m3js = factory(root, exports, Backbone, Marionette, THREE);
     });</pre></div></div>
             
         </li>
@@ -89,7 +89,9 @@ others that may still expect a global m3js.</p>
             <div class="content"><div class='highlight'><pre>  }
   <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> exports !== <span class="hljs-string">'undefined'</span>) {
     <span class="hljs-keyword">var</span> Backbone = <span class="hljs-built_in">require</span>(<span class="hljs-string">'backbone'</span>);
-    factory(root, exports, Backbone);</pre></div></div>
+    <span class="hljs-keyword">var</span> Marionette = <span class="hljs-built_in">require</span>(<span class="hljs-string">'marionette'</span>);
+    <span class="hljs-keyword">var</span> THREE = <span class="hljs-built_in">require</span>(<span class="hljs-string">'threejs'</span>);
+    factory(root, exports, Backbone, Marionette, THREE);</pre></div></div>
             
         </li>
         
@@ -106,10 +108,10 @@ others that may still expect a global m3js.</p>
             
             <div class="content"><div class='highlight'><pre>  }
   <span class="hljs-keyword">else</span> {
-    root.m3js = factory(root, {}, root.Backbone);
+    root.m3js = factory(root, {}, root.Backbone, root.Marionette, root.THREE);
   }
 
-}(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(root, m3js, Backbone)</span> </span>{
+}(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(root, m3js, Backbone, Marionette, THREE)</span> </span>{
 <span class="hljs-pi">  'use strict'</span>;</pre></div></div>
             
         </li>
