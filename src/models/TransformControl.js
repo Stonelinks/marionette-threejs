@@ -43,9 +43,9 @@ var TransformControl = m3js.TransformControl = Backbone.Model.extend({
       if (!_.isEqual(drawable.get('matrix'), elementsRowMajor)) {
         drawable.set('matrix', elementsRowMajor);
         // drawable.trigger('change:matrix');
-        drawable.save({
-          // silent: true
-        });
+        // drawable.save({
+        // silent: true
+        // });
       }
     });
 
