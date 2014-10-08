@@ -30,7 +30,7 @@
               <p>marionette-threejs - v0.0.3</p>
 <p><a href="https://github.com/Stonelinks/marionette-threejs">https://github.com/Stonelinks/marionette-threejs</a></p>
 <p>Simple wrappers around three.js components using Backbone.Marionette</p>
-<p>Copyright (c)2014 - Lucas Doyle <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x6c;&#x75;&#x63;&#97;&#x73;&#46;&#x70;&#x2e;&#x64;&#x6f;&#x79;&#108;&#x65;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#x6c;&#x75;&#x63;&#97;&#x73;&#46;&#x70;&#x2e;&#x64;&#x6f;&#x79;&#108;&#x65;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a></p>
+<p>Copyright (c)2014 - Lucas Doyle <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#108;&#117;&#99;&#x61;&#115;&#46;&#x70;&#x2e;&#x64;&#111;&#121;&#x6c;&#101;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#108;&#117;&#99;&#x61;&#115;&#46;&#x70;&#x2e;&#x64;&#111;&#121;&#x6c;&#101;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a></p>
 <p>Distributed under MIT license</p>
 
             </div>
@@ -3098,11 +3098,15 @@ silent: true
             }
   
             <span class="hljs-keyword">if</span> (raycastedDrawable) {
-              <span class="hljs-keyword">this</span>.transformControl.attachDrawable(raycastedDrawable);
+              <span class="hljs-keyword">this</span>.triggerMethod(<span class="hljs-string">'drawable:pointerUp'</span>, raycastedDrawable);
             }
           }
         });
       }
+    },
+  
+    onDrawablePointerUp: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(drawable)</span> </span>{
+      <span class="hljs-keyword">this</span>.transformControl.attachDrawable(drawable);
     },
   
     onMouseWheel: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> </span>{
@@ -3375,8 +3379,6 @@ silent: true
   
         <span class="hljs-keyword">this</span>.setupTransformControl();
         <span class="hljs-keyword">this</span>.setupOrbitControl();
-  
-        <span class="hljs-keyword">this</span>.collection.fetch();
   
         <span class="hljs-keyword">var</span> _this = <span class="hljs-keyword">this</span>;
         <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'resize'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
