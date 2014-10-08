@@ -62,11 +62,15 @@ var ThreeJSRenderer = m3js.ThreeJSRenderer = Marionette.ItemView.extend({
           }
 
           if (raycastedDrawable) {
-            this.transformControl.attachDrawable(raycastedDrawable);
+            this.triggerMethod('drawable:pointerUp', raycastedDrawable);
           }
         }
       });
     }
+  },
+
+  onDrawablePointerUp: function(drawable) {
+    this.transformControl.attachDrawable(drawable);
   },
 
   onMouseWheel: function(e) {
@@ -303,8 +307,6 @@ var ThreeJSRenderer = m3js.ThreeJSRenderer = Marionette.ItemView.extend({
 
       this.setupTransformControl();
       this.setupOrbitControl();
-
-      this.collection.fetch();
 
       var _this = this;
       window.addEventListener('resize', function() {

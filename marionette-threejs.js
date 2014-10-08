@@ -1,4 +1,4 @@
-// marionette-threejs - v0.0.3
+// marionette-threejs - v0.0.4
 //
 // https://github.com/Stonelinks/marionette-threejs
 //
@@ -2242,11 +2242,15 @@
             }
   
             if (raycastedDrawable) {
-              this.transformControl.attachDrawable(raycastedDrawable);
+              this.triggerMethod('drawable:pointerUp', raycastedDrawable);
             }
           }
         });
       }
+    },
+  
+    onDrawablePointerUp: function(drawable) {
+      this.transformControl.attachDrawable(drawable);
     },
   
     onMouseWheel: function(e) {
@@ -2483,8 +2487,6 @@
   
         this.setupTransformControl();
         this.setupOrbitControl();
-  
-        this.collection.fetch();
   
         var _this = this;
         window.addEventListener('resize', function() {
